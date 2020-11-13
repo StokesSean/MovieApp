@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../globals/fontawesome";
 import { Link } from "react-router-dom";
 
-const MovieCard = props => {
+const MovieCard = (props) => {
+
     const handleAddToFavorites = e => {
         e.preventDefault()
         props.buttonHandler(props.movie.id)  // new line
       }
+
   return (
     <div className="col-sm-3">
       <div className="card  bg-white">
