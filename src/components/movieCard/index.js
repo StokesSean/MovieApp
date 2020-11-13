@@ -3,6 +3,7 @@ import "./movieCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../globals/fontawesome";
 
+
 const MovieCard = props => {
   return (
     <div className="col-sm-3">
