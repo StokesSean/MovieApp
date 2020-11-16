@@ -9,7 +9,8 @@ import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom" 
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
 import SiteHeader from './components/siteHeader'
 import UpComingMoviesPage from './pages/upcomingMoviesPage' 
-import GenresContextProvider from "./contexts/genresContext";
+import GenresContextProvider from "./contexts/genresContext"
+import AddMovieReviewPage from './pages/addMovieReviewPage'
 const App = () => {
   return (
       <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>    {/* NEW */}
         <Switch>
+        <Route exact path="/reviews/form" component={AddMovieReviewPage} />
         <Route path="/reviews/:id" component={MovieReviewPage} />
         <Route exact path="/movies/upcoming" component={UpComingMoviesPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
