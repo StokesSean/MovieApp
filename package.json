@@ -15,12 +15,12 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome '",
     "storybook": "start-storybook -s ./public -p 6006 -c ./.storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:ci": "start-server-and-test 'http-server ./build  -p 3000' 3000 'cypress run --browser chrome '"
   },
   "eslintConfig": {
     "extends": "react-app"
