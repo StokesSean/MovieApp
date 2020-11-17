@@ -11,6 +11,7 @@ export default ({ movie }) => {
       setReviews(reviews);
     });
   }, []);
+  // eslint-disable-next-line
   return (
     <table className="table table-striped table-bordered table-hover">
       <thead>
