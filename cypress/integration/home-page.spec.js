@@ -21,7 +21,8 @@ describe("Home Page ", () => {
       })
   })
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit(`/`);
+    cy.get(".card").eq(2).find("img").click();
   });
     describe("Base test", () => {
       it("displays page header", () => {
