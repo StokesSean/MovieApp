@@ -25,11 +25,14 @@ bundle_app:
   stage: build
   script:
     - npm run build
-    
+  artifacts:
+    paths:
+      - build/  
 e2etest:    
     stage: test
     before_script:
       - npm install -g http-server
-      - npm install cypress@5.3.0
+      - npm install cypress
     script:
+       # start the server in the background
       - npm run start:ci
