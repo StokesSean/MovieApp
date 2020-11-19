@@ -9,7 +9,8 @@ export default ({ movie }) => {
   useEffect(() => {
     getMovieReviews(movie.id).then(reviews => {
       setReviews(reviews);
-    });// eslint-disable-next-line
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   return (
