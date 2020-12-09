@@ -5,8 +5,8 @@ import AddToWatchListButton from '../components/buttons/addToWatchList'
 
 const UpComingMoviesPage = () => {
   const context = useContext(MoviesContext);
-  const movies = context.movies.filter((m) => {  // New
-    return !("favorite" in m);
+  const movies = context.upcoming.filter((m) => {  // New
+    return !("watchlist" in m) 
   });
 
  

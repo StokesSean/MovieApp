@@ -1,3 +1,35 @@
+.Select-Genre{
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    background:#ffffff;
+    border:1px solid #ffffff;
+    padding-right: 0px;
+    width: 150px;
+    height: 35px;
+
+}
+#test{
+    padding-right: 620px;
+}
+
+.Search-Movie{
+    width: 500px;
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    background:#ffffff;
+    border:1px solid #ffffff;
+    height: 35px;
+}
+.Select-Text{
+    color:white;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.Search-Text{
+    padding-left: 10px;
+}
 .fixed-top {
     padding-top: 0px;
     padding-bottom: 0px;
