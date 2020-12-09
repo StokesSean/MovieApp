@@ -7,6 +7,7 @@ import HomePage from "./pages/homePage";
 import MoviePage from './pages/movieDetailsPage'
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom"    // CHANGED
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
+import UpcomingMoviesContextProvider from './contexts/upcomingMoviesContext'
 import SiteHeader from './components/siteHeader'
 import UpComingMoviesPage from './pages/upcomingMoviesPage' 
 import GenresContextProvider from "./contexts/genresContext"
@@ -17,6 +18,7 @@ const App = () => {
         <div className="jumbotron">
           <SiteHeader />      {/* New Header  */}
           <div className="container-fluid">
+          <UpcomingMoviesContextProvider> {/* NEW */}
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>    {/* NEW */}
         <Switch>
@@ -30,6 +32,7 @@ const App = () => {
         </Switch>
         </GenresContextProvider>    {/* NEW */}
         </MoviesContextProvider>     {/* NEW */}
+        </UpcomingMoviesContextProvider> {/* NEW */}
       </div>
     </div>
   </BrowserRouter>
