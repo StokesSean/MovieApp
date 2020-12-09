@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import {UpcomingMoviesContext} from '../../contexts/upcomingMoviesContext.js'
+import {MoviesContext} from '../../contexts/moviesContext'
+
 
 const AddToWatchListButton = ({ movie }) => {
-  const context = useContext(UpcomingMoviesContext);
+  const context = useContext(MoviesContext);
 
   const handleAddToFavorite = e => {
     e.preventDefault();
