@@ -1,5 +1,5 @@
 import React, { useEffect, createContext, useReducer } from "react";
-import { getMovies, getUpcomingMovies } from "../api/tmdb-api";
+import { getMovies, getUpcomingMovies} from "../api/tmdb-api";
 
 export const MoviesContext = createContext(null);
 
@@ -70,7 +70,7 @@ const MoviesContextProvider = (props) => {
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  
   return (
     <MoviesContext.Provider
       value={{

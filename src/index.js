@@ -1,3 +1,5 @@
+import TvContextProvider from './contexts/tvContext'
+import TvListPage from './pages/tvShowsPage'
 import MovieReviewPage from "./pages/movieReviewPage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import React from "react";
@@ -18,9 +20,11 @@ const App = () => {
           <div className="container-fluid">
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>    {/* NEW */}
+          <TvContextProvider>       {/* PROJECT NEW */}
           <SiteHeader />      {/* New Header  */}
         <Switch>
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+        <Route path="/tvshows" component={TvListPage} />
         <Route path="/reviews/:id" component={MovieReviewPage} />
         <Route exact path="/movies/upcoming" component={UpComingMoviesPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
@@ -28,6 +32,7 @@ const App = () => {
           <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
         </Switch>
+        </TvContextProvider>        {/* PROJECT NEW */}
         </GenresContextProvider>    {/* NEW */}
         </MoviesContextProvider>     {/* NEW */}
       </div>

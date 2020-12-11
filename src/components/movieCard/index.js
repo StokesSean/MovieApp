@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const MovieCard = ({movie, action}) => {
 
   return (
-    <div className="col-sm-3">
-      <div className="card  bg-white">
+    <div className="col-sm-2">
+      <div className="card  bg-dark">
       <Link to={`/movies/${movie.id}`}>
         <img
           className="card-img-tag center "

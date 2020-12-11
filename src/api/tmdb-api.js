@@ -35,3 +35,17 @@ export const getMovies = () => {
       .then(res => res.json())
       .then(json => json.results);
   };
+  export const getTvShows = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/tv/popular?api_key=f156e79de5d5698071b18e5177cfbcb7&language=en-US&page=1`
+    )
+      .then(res => res.json())
+      .then(json => json.results);
+  };
+  export const getTvShowsReviews = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+    )
+      .then(res => res.json())
+      .then(json => json.results);
+  };

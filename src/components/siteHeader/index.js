@@ -35,12 +35,12 @@ const SiteHeader  = props => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/upcoming">
+            <Link className="nav-link text-white" to="/tvshows">
               TV Shows
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
+            <Link className="nav-link text-white" to="/movies/upcoming">
               Up Coming
             </Link>
           </li>
@@ -73,11 +73,16 @@ const SiteHeader  = props => {
           <input
             className="Search-Movie"
             type="text"
-            placeholder="Search Our Movie Database"
+            placeholder="Search Our Movie Database...."
             onChange={handleTextChange}
           />
           </li>
-
+          <li className="nav" >
+            <Link className="nav-link text-white" to="/movies/favorites">
+              Login/signup
+            </Link>
+          </li>
+          <li className="nav-item"></li>
         </ul>
       </nav>
     </nav>
