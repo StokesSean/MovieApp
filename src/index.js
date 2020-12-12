@@ -12,6 +12,7 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
 import SiteHeader from './components/siteHeader'
 import UpComingMoviesPage from './pages/upcomingMoviesPage' 
 import GenresContextProvider from "./contexts/genresContext"
+import TvGenresContextProvider from "./contexts/tvGenresContext"
 import AddMovieReviewPage from './pages/addMovieReviewPage'
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>    {/* NEW */}
           <TvContextProvider>       {/* PROJECT NEW */}
+          <TvGenresContextProvider> {/* PROJECT NEW */}
           <SiteHeader />      {/* New Header  */}
         <Switch>
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
@@ -32,6 +34,7 @@ const App = () => {
           <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
         </Switch>
+        </TvGenresContextProvider>{/* PROJECT NEW */}
         </TvContextProvider>        {/* PROJECT NEW */}
         </GenresContextProvider>    {/* NEW */}
         </MoviesContextProvider>     {/* NEW */}
