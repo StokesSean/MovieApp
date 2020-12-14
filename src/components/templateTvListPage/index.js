@@ -7,12 +7,12 @@ const TvListPageTemplate = ({tvshows, title , action}) => {
     const [genreFilter, setGenreFilter] = useState("0");
     const genre = Number(genreFilter)
     let displayedtvshows = tvshows
-    .filter(m => {
-      return m.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
+    .filter(t => {
+      return t.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })
-    .filter(m => {
+    .filter(t => {
       return  genre > 0
-        ? m.genre_ids.includes(Number(genreFilter))
+        ? t.genre_ids.includes(Number(genreFilter))
         : true;
     });
 

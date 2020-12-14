@@ -1,6 +1,7 @@
 import React, { useState, useEffect, createContext } from "react";
 import { getGenres } from "../api/tmdb-api";
 
+
 export const GenresContext = createContext(null)
 
 const GenresContextProvider = props => {

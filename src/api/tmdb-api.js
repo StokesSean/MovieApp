@@ -53,6 +53,13 @@ export const getMovies = () => {
       .then(res => res.json())
       .then(json => json.results);
   };
+  export const getTvShow = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    )
+      .then(res => res.json())
+      .then(json => json.results);
+  };
   export const getTvSeasons = id => {
     return fetch(
       `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
