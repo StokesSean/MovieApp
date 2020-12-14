@@ -27,7 +27,7 @@ export default ({ tvshow }) => {
                 <td>{r.author}</td>
                 <td>{excerpt(r.content)}</td>
                 <td>
-                  {" "}
+                  {" "
                   <Link
                     to={{
                       pathname: `/reviews/${r.id}`,
