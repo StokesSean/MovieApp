@@ -10,6 +10,7 @@ export default ({ tvshow }) => {
     getTvShowsReviews(tvshow.id).then(reviews => {
       setReviews(reviews);
     });
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <table className="table table-striped table-bordered table-hover">
@@ -27,7 +28,7 @@ export default ({ tvshow }) => {
                 <td>{r.author}</td>
                 <td>{excerpt(r.content)}</td>
                 <td>
-                  {" "
+                  {" "}
                   <Link
                     to={{
                       pathname: `/reviews/${r.id}`,

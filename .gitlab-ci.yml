@@ -11,7 +11,7 @@ stages:
 variables:
   npm_config_cache: "$CI_PROJECT_DIR/.NPM"
   CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/cache/Cypress"
-  CYPRESS_TMDB_KEY: "f156e79de5d5698071b18e5177cfbcb7"
+  CYPRESS_TMDB_KEY: "process.env.REACT_APP_TMDB_KEY"
 
 install_dependencies:
   stage: install
