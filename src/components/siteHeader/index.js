@@ -40,7 +40,7 @@ const SiteHeader  = props => {
             </Link>
           </li>
           <li className="nav">
-            <Link className="nav-link text-white" to="/movies/upcoming">
+            <Link className="nav-link text-white" to="/movies/upcoming" >
               Up Coming
             </Link>
           </li>
