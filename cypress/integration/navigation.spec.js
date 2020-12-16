@@ -36,19 +36,27 @@ describe("Navigation", () => {
       cy.get("h2").contains(movies[1].title);
     });
     it("should allow navigation from site header", () => {
-      cy.get("nav").find("li").eq(2).find("a").click();
-      cy.url().should("include", `/favorites`);
+      // This tests all the the links on the site header
+      //Tv Show Test
+      cy.contains('a', 'TV Shows').last().click({ force: true });
+      cy.url().should("include", `/tvshows`);
+      cy.get("h2").contains("Tv Shows");
+      //Up Comeing Movies
+      cy.contains('a', 'Up Coming').last().click({ force: true });
+      cy.url().should("include", `/movies/upcoming`);
+      cy.get("h2").contains("Up Comeing Movies");
+      //Favourites Test
+      cy.contains('a', 'Favorites').last().click({ force: true });
+      cy.url().should("include", `/movies/favorites`);
       cy.get("h2").contains("Favorite Movies");
-      cy.get("nav").find("li").eq(0).find("a").click();
-      cy.url().should("not.include", `/favorites`);
-      cy.get("h2").contains("No. Movies");
-      cy.get("nav").find("li").eq(0).find("a").click();
-      cy.get("nav.navbar-brand").find("a").click();
+      //Home Movies Test
+      cy.get("nav").find("li").eq(0).find("a").last().click({ force: true });
+      cy.get("nav.navbar-brand").find("a").last().click({ force: true });
       cy.url().should("not.include", `/favorites`);
       cy.get("h2").contains("No. Movies");
     });
   });
-/*
+
   describe("From the Movie Details page ", () => {
     beforeEach(() => {
       cy.visit(`/movies/${movieId}`);
@@ -69,7 +77,7 @@ describe("Navigation", () => {
     beforeEach(() => {
       cy.visit("/");
       cy.get(".card").eq(0).find("button").click();
-      cy.get("nav").find("li").eq(2).find("a").click();
+      cy.contains('a', 'Favorites').last().click({ force: true });
     });
     it("should navigate to the movies detail page and change the browser URL", () => {
       cy.get(".card").eq(0).find("img").click();
@@ -89,7 +97,7 @@ describe("Navigation", () => {
     });
     it("should navigate from favorites page to movie details and back", () => {
         cy.get(".card").eq(0).find("button").click();
-        cy.get("nav").find("li").eq(2).find("a").click();
+        cy.contains('a', 'Favorites').last().click({ force: true });
         cy.url().should("include",`/movies/favorites` )
         cy.get(".card").eq(0).find("img").click();
         cy.url().should("include", `/movies/${movies[0].id}`);
@@ -98,5 +106,5 @@ describe("Navigation", () => {
         cy.url().should("include",`/movies/favorites` )
 
     });
-  }); */
+  }); 
 });

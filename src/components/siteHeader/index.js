@@ -39,7 +39,7 @@ const SiteHeader  = props => {
               TV Shows
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav">
             <Link className="nav-link text-white" to="/movies/upcoming">
               Up Coming
             </Link>
