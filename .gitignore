@@ -10,7 +10,6 @@
 /build
 
 # misc
-cypress.env.json
 .DS_Store
 /**/.DS_Store
 .env.local
