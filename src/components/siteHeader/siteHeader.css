@@ -16,8 +16,7 @@
 .Search-Movie{
     width: 400px;
     border-radius:36px;
-    display:inline-block;
-    overflow:hidden;
+    position: relative;
     background:#ffffff;
     border:1px solid #ffffff;
     height: 35px;
@@ -27,9 +26,7 @@
     padding-left: 10px;
     padding-right: 5px;
 }
-.Search-Text{
-    padding-left: 10px;
-}
+
 .fixed-top {
     padding-top: 0px;
     padding-bottom: 0px;

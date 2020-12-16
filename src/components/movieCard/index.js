@@ -21,7 +21,7 @@ const MovieCard = ({movie, action}) => {
         />
         </Link>
         <div className="card-body">
-
+        <h4 className="card-title ">{movie.title}</h4>
           <p>
             <FontAwesomeIcon icon={["fas", "star"]} />
             <span> {movie.vote_average}</span>

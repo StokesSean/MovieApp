@@ -67,12 +67,11 @@ const SiteHeader  = props => {
                  })}
               </select>
           </li>
-          <li className="nav-item">
-
-          <span className="Search-Text"></span>
+          <li className="nav" >
           <input
             className="Search-Movie"
             type="text"
+            id="testing"
             placeholder="Search Our Movie Database...."
             onChange={handleTextChange}
           />

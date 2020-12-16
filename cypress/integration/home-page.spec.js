@@ -22,7 +22,7 @@ describe("Home Page ", () => {
       })
   })
   beforeEach(() => {
-    cy.visit("/")
+    cy.visit("/");
   });
     describe("Base test", () => {
       it("displays page header", () => {
@@ -35,7 +35,7 @@ describe("Home Page ", () => {
       it("should display movies with 'p ' in the title", () => {
         const searchString = 'p'
         const matchingMovies = filterByTitle(movies, searchString );
-        cy.get("input").clear().type(searchString) ;
+        cy.get("nav").get("li").get("input").last().type(searchString);
         cy.get(".card").should("have.length", matchingMovies.length);
         cy.get(".card").each(($card, index) => {
           cy.wrap($card)
@@ -46,7 +46,7 @@ describe("Home Page ", () => {
       it("should display movies with 'o' in the title", () => {
         const searchString = "o";
         const matchingMovies = filterByTitle(movies, searchString);
-        cy.get("input").clear().type(searchString);
+        cy.get("nav").get("li").get("input").last().type(searchString);
         cy.get(".card").should("have.length", matchingMovies.length);
         cy.get(".card").each(($card, index) => {
           cy.wrap($card)
@@ -57,7 +57,7 @@ describe("Home Page ", () => {
       it("should display no movies with no matches in the title", () => {
         const searchString = "xyz";
         const matchingMovies = filterByTitle(movies, searchString);
-        cy.get("input").clear().type(searchString);
+        cy.get("nav").get("li").get("input").last().type(searchString);
         cy.get(".badge").contains(0);
       })
     })
@@ -67,7 +67,7 @@ describe("Home Page ", () => {
           const selectedGenreId = 35;
           const selectedGenreText = "Comedy";
           const matchingMovies = filterByGenre(movies, selectedGenreId);
-          cy.get("select").select(selectedGenreText); 
+          cy.get("select").last().select(selectedGenreText); 
           cy.get(".card").should("have.length", matchingMovies.length);
           cy.get(".card").each(($card, index) => {
             cy.wrap($card)
@@ -83,8 +83,8 @@ describe("Home Page ", () => {
           const selectedGenreText = "Comedy";
           const matchingMovies = filterByGenre(movies, selectedGenreId)
           const matchingMovieswithtitle = filterByTitle(matchingMovies, searchString)
-          cy.get("input").clear().type(searchString);
-          cy.get("select").select(selectedGenreText); 
+          cy.get("nav").get("li").get("input").last().type(searchString);
+          cy.get("select").last().select(selectedGenreText);  
           cy.get(".card").should("have.length", matchingMovieswithtitle.length);
           cy.get(".card").each(($card, index) => {
             cy.wrap($card)

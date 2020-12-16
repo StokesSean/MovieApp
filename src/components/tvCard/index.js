@@ -21,7 +21,7 @@ const TvShowCard = ({tvshow, action}) => {
         />
         </Link>
         <div className="card-body">
-          <h4 className="card-title ">{tvshow.title}</h4>
+          <h4 className="card-title ">{tvshow.name}</h4>
           <p>
             <FontAwesomeIcon icon={["fas", "star"]} />
             <span> {tvshow.vote_average}</span>
