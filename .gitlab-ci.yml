@@ -32,6 +32,7 @@ e2etest:
     stage: test
     only:
       - master
+      - stageing
     before_script:
       - npm install -g http-server
       - npm install cypress@5.3.0
