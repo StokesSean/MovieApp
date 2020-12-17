@@ -20,7 +20,9 @@ describe("Tv-Shows page", () => {
        })
     })
     beforeEach(() => {
-        cy.visit("/tvshows")
+        cy.visit("/tvshows");
+        cy.contains('a', 'TV Shows').last().click({ force: true });
+        cy.url().should("include", `/tvshows`);
     });
     describe("Base test", () => {
       it("displays page header",()=>{
