@@ -4,7 +4,7 @@ Name: Sean Stokes
 
 ## Features.
 
-...... A bullet-point list of the ADDITIONAL user features you have implemented for the  Movies Fan app ......,
+
  
  + Feature 1 = Tv Shows
  + Feature 2 = Tv Show Details
@@ -13,19 +13,12 @@ Name: Sean Stokes
 
 ## API Data Model.
 
-..... List the additional TMDB endpoints used in your assignment, e.g.
 
 +  `https://api.themoviedb.org/3/genre/tv/list?api_key="+process.env.REACT_APP_TMDB_KEY+"&language=en-US` -          Gets genre List for the tv shows
 +  `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1` -       Gets a list of popular tv shows
 +  `https://api.themoviedb.org/3/tv/${id2}?api_key=${process.env.REACT_APP_TMDB_KEY}` - 			     Gets the tv show details based of the id selected
 +  `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1` - Gets Tv Show Reviews
-## App Design.
 
-### Component catalogue (If required).
-
-....... Insert a screenshot from the Storybook UI, hi-light stories relating to new/modified components you developed - see example screenshot below] .......
-
-![][stories]
 
 ### UI Design
 
@@ -33,15 +26,17 @@ Name: Sean Stokes
 -Changed Cards and tv-list.
 -Moved search bar and genre list to the header.
 
-![][movieDetail]
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
+![][header]
+>Moved the search bar and genre pick list to the header.
 
-![][review]
->Shows the full text for a movie review. 
+![][newcard]
+>Changed The look of the card and the overall size of the cards
 
+![][overall]
+>Overall view of the changed made to the U.I
 ## Routing.
-+<TvGenresContextProvider> 
-+<TvContextProvider>       
++TvGenresContextProvider
++TvContextProvider       
 +/tvshow/:id2
 +/tvshows
 
@@ -60,7 +55,8 @@ Cypress Dashboard URL: https://dashboard.cypress.io/projects/xwy6h4/runs?branche
 
 
 
-
-
+[header]: header.JPG
+[newcard]: newcardlayout.jpg
+[overall]: overallchange.jpg
 ---------------------------------
 
